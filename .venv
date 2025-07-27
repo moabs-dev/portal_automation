@@ -1,0 +1,3 @@
+conda create --name new_proj
+
+conda activate new_proj
