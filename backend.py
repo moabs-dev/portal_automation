@@ -19,13 +19,13 @@ def upload_and_process(file: UploadFile = File(...), file_type: Literal["csv", "
     from web_aut import run_automation  # this should return path of the updated file + row count
     updated_file_path, row_count = run_automation(uploaded_path)
 
-    return {
+    return {    # How many rows processed and path of updated file which you can download
         "processed_rows": row_count,
         "updated_file": updated_file_path
     }
 
 @app.get("/download/")
-def download_file():
+def download_file(): 
     return FileResponse("Updated.xlsx", media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', filename="Updated.xlsx")
 
 if __name__ == "__main__":
