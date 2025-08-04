@@ -194,7 +194,7 @@ print('✅ Vertical selected')
 # print("✅ Test Type selected successfully.")
 
 # Step 1: Type into the select input
-test_type_input = WebDriverWait(driver, 60).until(
+test_type_input = WebDriverWait(driver, 60).until(  #wait is 60 bcz it can take soome time to find immunodeficiency
     EC.presence_of_element_located((By.ID, "react-select-11-input"))
 )
 test_type_input.clear()
