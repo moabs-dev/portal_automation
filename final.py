@@ -498,7 +498,7 @@ for i in range(len(dfs)):
     
         except Exception as e:
             print("❌ No popup and no good lead elements found. Possibly invalid lead or unexpected page.")
-    
+    #so, we may refresh page and start it all over
     driver.refresh()
     print(i)
 
